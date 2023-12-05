@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+body {
+    padding: 10px;
+    background-color: #282E33;
+}
+
+.container{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E2E3E4;
+}
+.article_top{
+    background-color: #282E33;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #E2E3E4;
+    border-radius: 5px;
+}
+.article{
+    font-size: 17px;
+}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    color: #E2E3E4;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+    color: #E2E3E4;
+}
+
+.image_responsive{
+    width: 100%;
+    height: auto;
+}
+#article_image{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.intro{
+    font-size: large;
+    text-align: center;
+    animation: colorrotate 6s linear 0s infinite;
+}
+
+@keyframes colorrotate {
+    0% {color: #FF0000;}
+    25% {color: #00FF00;}
+    50% {color: #0000FF;}
+    75% {color: #FFFF00;}
+    100% {color: #FF0000;}
+} /* https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css */
+
+.header{
+    text-align: center;
+    padding: 30px;
+}
+
+.footer{
+    text-align: center;
+    padding: 30px;
+    color: #E2E3E4;
+    font-size: 12px;
+}
+
+.navbar{
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1012px;
+}
+
+.navbar .icon{
+    display: none;
+    font-size: 15px;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: #E2E3E4;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #A7A8AB;
+    transform: scale(1.1);
+    text-shadow: none;
+}
+.navbar .active{
+    color: #A7A8AB;
+    text-shadow: none;
+}
+/* https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980 */
+@media screen and (max-width: 1000px){
+    .navbar a:not(:first-child) {display: none;} 
+    .navbar a.icon{
+        float: right;
+        display: block;
+    }
+} /* Have to be seperate from the above code, otherwise the icon will be hidden as well */
+
+@media screen and (max-width: 1000px) { /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navbar a{
+        font-size: 15px;
+    }
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    } 
+    .footer{
+        font-size: 16px;
+    }
+}
+#board  {
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wordle {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#wordle_textbox{
+    width: 100%;
+    height: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    place-items: center;
+}
+
+#wordle_textbox #input{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    #wordle_textbox #input{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+.wordle_score{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    color: #E2E3E4;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    color: white;
+}
+.box{
+    width: 60px;
+    height: 60px;
+    border: 2px solid ;
+    margin: 4px;
+    text-transform: uppercase;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 2.4rem;
+}
+.box.empty{
+    background-color: #282E33;
+}
+.box.wrong{
+    background-color: #FF0000;
+}
+.box.correct{
+    background-color: #00FF00;
+}
+
+.table_container{
+    color: #E2E3E4;
+    overflow-x: auto;
+}
+.table_container table{
+    border-collapse: collapse;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table_container tr td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.skills_container{
+    width: 100%;
+    margin: 60px auto;
+    color: #fff;
+    width: 50%;
+}
+
+.skills_container li{
+    margin: 20px 0;
+    list-style-type: none;
+}
+
+.page_not_found_404{
+    text-align: center;
+    color: #E2E3E4;
+}
+.page_not_found_404 h3{
+    font-size: 100px;
+    color: #E2E3E4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.page_not_found_404 p{
+    font-size: 20px;
+    color: #E2E3E4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.percent_bar{
+    background-color: #282E33;
+    display: block;
+    height: 10px;
+    border: 1px solid #E2E3E4;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+}
+.percent_bar span{
+    float: left;
+    height: 10px;
+}
+.html{
+    width: 90%;
+    background-color: #FF0000;
+    animation: html 2s;
+}
+.css{
+    width: 80%;
+    background-color: #00FF00;
+    animation: css 2s;
+}
+.python{
+    width: 95%;
+    background-color: #0000FF;
+    animation: python 2s;
+}
+.linux{
+    width: 70%;
+    background-color: #FFFF00;
+    animation: linux 2s;
+}
+@keyframes html {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+@keyframes css {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+@keyframes python {
+    0% {width: 0%;}
+    100% {width: 95%;}
+}
+@keyframes linux {
+    0% {width: 0%;}
+    100% {width: 70%;}
+} /* https://www.w3schools.com/howto/howto_css_skill_bar.asp */
+
+.social { /* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    display: inline-block;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+  

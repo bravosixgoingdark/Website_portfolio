@@ -1,0 +1,86 @@
+<!--TODO: add a manifest.json file-->
+<!--TODO: fix the damm manifest-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/assets/styles/styles.css"/>
+    <link href="https://fonts.cdnfonts.com/css/source-code-pro" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#282E33"/>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <div class="intro">
+            <h1>./Hello_world</h1>
+        </div>
+    </header>
+    <!--Navbar-->
+    <nav id="topbar" class="navbar">
+        <a class="active">About me</a>
+        <a href="quals.html">Quals</a>
+        <a href="skills.html">Skills</a>
+        <a href="wordle.html">Wordle game</a>
+        <a href="css1.html">CSS1</a>
+        <a href="css2.html">CSS2</a>
+        <a class="icon" onclick="responsive_navbar()"><i class="fa fa-bars"></i></a>
+    </nav>
+    <!--Main-->
+    <div class="row">
+        <!--Main content-->
+        <div class="leftcolumn">
+            <article class="article">
+                <h2>About this page</h2>
+                <img src="assets/images/code.jpg" id="article_image">
+                <p>This page is my homepage, redirect and most importantly my CSS/JS playground. I'm also hosting a wordle game on this page too</p>
+            </article>
+        <article class="article">
+            <h2>My devices</h2>
+            <div>
+                <ul>
+                  <li>main: Legion Pro 2023 @ Kubuntu 22.04</li> 
+                  <li>second: Thinkpad T14 @ Kubuntu 22.04</li>
+                  <li>tablet: iPad 9th Gen 64GB</li>
+                  <li>phone: iPhone SE 2nd Gen 64GB</li>
+                  <li>homeserver: custom i5 server @ Ubuntu 22.04</li>
+                  <li>keyboard: Razer Huntsman TE</li>
+                  <li>mouse: Razer Deathadder V2</li> 
+                </ul>
+            </div>
+        </article>
+    </div>
+        <!--Sidebar-->
+        <aside class="rightcolumn">
+            <div class="article">
+                <h2>About me</h2>
+                <img src="assets/images/me.png" class="image_responsive">
+                <p>I'm Price, a passionate software developer and security researcher with a keen interest in crafting robust and secure digital landscapes. My journey in the realm of technology has been an exhilarating ride, marked by a commitment to excellence and a relentless pursuit of knowledge.</p>
+             </div>
+            <div class="article">
+                <h3>Fun facts about me</h3>
+                <ol>
+                    <li>I'm very LGBTQ friendly</li>
+                    <li>I'm quite a night owl myself</li>
+                    <li>I'm a huge fan of the cyberpunk genre</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>Follow Me</h3>
+                <a href="#" class="social fa fa-twitter"></a>
+            </div>
+        </aside>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+        <h2><span>&#169;</span> 2023 Captain Price</h2>
+    </footer>
+      
+<script src="scripts/main.js"></script>
+<script src="serviceworker.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--TODO: add a manifest.json file-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/assets/styles/styles.css"/>
+    <link href="https://fonts.cdnfonts.com/css/source-code-pro" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon"/>
+    <meta name="theme-color" content="#282E33"/>
+</head>
+<body>
+    <header class="header">
+        <div class="intro">
+            <h1>./Hello_world</h1>
+        </div>
+    </header>
+    <nav id="topbar" class="navbar">
+        <a href="index.html">About me</a>
+        <a href="quals.html">Quals</a>
+        <a href="skills.html">Skills</a>
+        <a href="wordle.html">Wordle game</a>
+        <a class="active">CSS1</a>
+        <a href="css2.html">CSS2</a>
+        <a class="icon" onclick="responsive_navbar()"><i class="fa fa-bars"></i></a>
+    </nav>
+      
+    <div class="row">
+        <div class="container">
+            <div class="card">
+                <h2>NetworkPwn - Critical Linux Kernel Bug</h2>
+                <img src="assets/images/linux-kernel.webp" id="article_image">
+                <p></p>
+            </div>
+        <article class="article_top">
+            <h2>Abstract:</h2>
+            <h3>This write-up details the discovery and responsible disclosure of a critical security vulnerability in the Linux kernel, allowing remote code execution. The vulnerability, assigned CVE-2023-XXXX, poses a significant threat to systems running Linux Kernel versions 4.18 to 5.10.</h3>
+        </article>
+        <article class="article">
+            <h2>Introduction:</h2>
+            <h3>On the 1st of January 2023, I discovered a critical security vulnerability in the Linux kernel, allowing remote code execution. The vulnerability, assigned CVE-2023-XXXX, poses a significant threat to systems running Linux Kernel versions 4.18 to 5.10. The vulnerability was discovered during a routine security audit of the Linux kernel, with the vulnerability being present in the Linux kernel since version 4.18. The vulnerability was responsibly disclosed to the Linux kernel security team on the 2nd of January 2023, with the vulnerability being patched on the 3rd of January 2023. The vulnerability was disclosed to the public on the 4th of January 2023.</h3>
+        </article>
+        <article class="article">
+            <h2>Technical details:</h2>
+            <h3>The vulnerability is a heap-based buffer overflow in the Linux kernel’s network stack. The vulnerability is triggered when a maliciously crafted packet is sent to a vulnerable system, causing a heap-based buffer overflow. The vulnerability is caused by a lack of input validation on the size of the packet, allowing an attacker to send a packet larger than the maximum size of a packet. </h3>
+        </article>
+        <article class="article">
+            <h2>Vuln description:</h2>
+            <img src="/assets/images/bug.jpg" id="article_image">
+            <h3>The identified vulnerability resides in the network stack implementation of the affected kernel versions. Through a meticulous analysis of the codebase, it was observed that a flaw in handling specific network packets could lead to a buffer overflow condition. This, in turn, enables an attacker to execute arbitrary code within the kernel space remotely.
+
+                The severity of the vulnerability lies in its potential to be exploited without user interaction, allowing adversaries to compromise systems from a distance. The successful exploitation of this flaw grants the attacker kernel-level privileges, posing a serious risk of unauthorized access, data exfiltration, and further exploitation within the compromised environment.
+            </h3>
+        </article>
+    <footer class="footer">
+        <h2><span>&#169;</span> 2023 Captain Price</h2>
+    </footer>
+</div> 
+<script src="scripts/main.js"></script>
+</body>
+</html>
